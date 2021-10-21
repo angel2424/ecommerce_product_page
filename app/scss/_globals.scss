@@ -1,0 +1,67 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+
+    &__jc_c {
+        justify-content: center;
+    }
+
+    &__jc_sb {
+        justify-content: space-between;
+    }
+
+    &__ai_c {
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include mobile{
+    .hide-for-mobile {
+        display: none;
+    }
+}
+
+
+@include desktop {
+    .hide-for-desktop {
+        display: none;
+    }
+    .hide-for-mobile {
+        display: flex;
+    }
+}

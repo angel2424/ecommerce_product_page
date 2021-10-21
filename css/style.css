@@ -1,0 +1,239 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-family: 'Kumbh Sans', sans-serif;
+  width: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex__jc_c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex__jc_sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex__ai_c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 300px) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide-for-desktop {
+    display: none;
+  }
+  .hide-for-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+header {
+  height: 70px;
+  padding: 25px;
+  background-color: #fff;
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 45px 0;
+    height: auto;
+    margin: 0 150px;
+    border-bottom: .2px solid #b6bcc87a;
+  }
+}
+
+header img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+
+header .logo {
+  margin-left: 20px;
+}
+
+@media (min-width: 1024px) {
+  header .logo {
+    margin-left: 0;
+  }
+}
+
+header .hamburger_menu {
+  width: 20px;
+}
+
+header .user_menu {
+  margin-left: auto;
+}
+
+header .user_menu .profile {
+  margin-left: 25px;
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  header .user_menu .profile {
+    height: 40px;
+    margin-left: 40px;
+    border: 0 solid #ff7d1a;
+    border-radius: 50%;
+    -webkit-transition: ease-in-out .1s;
+    transition: ease-in-out .1s;
+  }
+  header .user_menu .profile:hover {
+    border: 2px solid #ff7d1a;
+    border-radius: 50%;
+  }
+}
+
+header .user_menu .cart {
+  -webkit-transition: ease-in-out .18s;
+  transition: ease-in-out .18s;
+}
+
+header .user_menu .cart:hover {
+  opacity: .7;
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+}
+
+header .main_menu {
+  list-style-type: none;
+}
+
+header .main_menu li {
+  margin: 0 17px;
+}
+
+header .main_menu a {
+  position: relative;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #68707d;
+  -webkit-transition: ease-in-out .18s;
+  transition: ease-in-out .18s;
+}
+
+header .main_menu a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 88px;
+  height: 3px;
+  width: 100%;
+  background-color: #ff7d1a;
+  -webkit-transition: ease-in-out .1s;
+  transition: ease-in-out .1s;
+  visibility: hidden;
+}
+
+header .main_menu a:hover::after {
+  visibility: visible;
+}
+
+header .main_menu a:hover {
+  color: #1d2025;
+}
+
+.overlay {
+  position: fixed;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: -25px;
+  width: 60vw;
+  height: 100vh;
+  background-color: #ffffff;
+  -webkit-box-shadow: -5px 2px 16px #1d202562;
+          box-shadow: -5px 2px 16px #1d202562;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: ease .4s;
+  transition: ease .4s;
+  z-index: 2;
+}
+
+@media (min-width: 1024px) {
+  .overlay {
+    display: none;
+  }
+}
+
+.overlay .mobile_menu {
+  position: absolute;
+  list-style-type: none;
+  top: 10%;
+  left: 5%;
+  -webkit-transform: translate(-10%, -5%);
+          transform: translate(-10%, -5%);
+}
+
+.overlay .mobile_menu li {
+  margin: 15px 0;
+}
+
+.overlay .mobile_menu a {
+  text-decoration: none;
+  color: #1d2025;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.overlay .close_menu {
+  width: 20px;
+  margin: 25px;
+}
+
+.open .overlay {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.open .blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .open .blur {
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+}
+
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .open .blur {
+    background-color: #1d20252a;
+  }
+}
+/*# sourceMappingURL=style.css.map */

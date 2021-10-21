@@ -1,0 +1,11 @@
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+};
+
+@function font-desk($font-size) {
+    @return map-get($deskFont, $font-size);
+};
+
+@function font-mobile($mobilefonts) {
+    @return map-get($mobileFont, $mobilefonts);
+};

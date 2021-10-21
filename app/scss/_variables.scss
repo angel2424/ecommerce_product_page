@@ -1,0 +1,27 @@
+// COLORS ------------------------------------------------------------
+
+$colors: (
+    primary: #ff7d1a,
+    secondary: #ffede0,
+    accents: #f7f8fd,
+    darkB: #1d2025,
+    darkGB: #68707d,
+    greyB: #b6bcc8,
+    white: #ffffff,
+    lightboxBg: hsla(0, 0%, 0%, 0.253),
+);
+
+// Font Sizes --------------------------------------------------------
+
+// Desktop font sizes
+
+$deskFont: (
+    paragraph: 1rem,
+    );
+    
+    // Mobile font sizes
+    
+$mobileFont: (
+    paragraph: 1rem,
+    mobileMenu: 1.1rem,
+);
