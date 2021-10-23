@@ -1,0 +1,163 @@
+.slider {
+    position: relative;
+
+    @include desktop {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 100vw;
+        max-height: 40vh;
+        object-fit: cover;
+
+        @include tablet {
+            max-height: 55vh;
+            object-position: top center;
+        }
+
+        @include desktop {
+            margin: 30px;
+            width: 450px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: ease .3s;
+
+            &:hover {
+                transform: scale(102%);
+                opacity: .8;
+            }
+        }
+    }
+
+    &_btns {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        img {
+            background-color: color(white);
+            padding: 12px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: -1px 1px 16px #1c202591;
+        }
+
+        &__next {
+            position: absolute;
+            right: 10px;
+        }
+        &__previous {
+            margin-left: 10px;
+        }
+    }
+
+    /// ONLY VISIBLE ON DESKTOP /////////////////////////////
+
+    .thumbnails {
+        width: 450px;
+
+        .thumbnail {
+            width: 90px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: ease-in-out .2s;
+
+            &:hover {
+                opacity: .5;
+            }
+
+        }
+        .active {
+            opacity: .7;
+            border: 3px solid color(primary);
+        }
+    }
+
+}
+
+// styles for lightbox
+.lightbox {
+
+    .slider_container{   
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 4;
+
+
+        .slide_img_controls {
+            position: relative;
+
+            .slider_btns_light {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+                img {
+                    background-color: color(white);
+                    padding: 12px 15px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    box-shadow: -1px 1px 16px #1c202591;
+                }
+
+                .light_btns__next {
+                    position: absolute;
+                    right: -15px;
+                }
+                .light_btns__previous {
+                    margin-left: -15px;
+                }
+            }
+        }
+    
+        .slider_imgs {
+            width: 550px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+    
+        
+        .light_thumb {
+            width: 115px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .active {
+            opacity: .7;
+            border: 3px solid color(primary);
+        }
+    }
+    
+}
+
+.on {
+    .slider_container {
+        display: flex;
+    }
+    .bg {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+    
+        @supports (backdrop-filter: none){
+            backdrop-filter: blur(2px);
+        }
+    
+        @supports not (backdrop-filter: none){
+            background-color: #1d202578;
+        }
+    }
+}
+
+
+

@@ -48,6 +48,47 @@
             </div>    
         </header>
 
+        <main>
+            <div class="product_slider_container">
+                <div class="slider flex flex__jc_c flex__ai_c">
+                    <img class="image" src="" alt="Product Image">
+
+                    <div class="slider_btns hide-for-desktop">
+                        <img class="slider_btns__previous" src="images/icon-previous.svg" >
+                        <img class="slider_btns__next" src="images/icon-next.svg" >
+                    </div>
+                    
+                    <!-- ONLY VISIBLE ON DESKTOP -->
+                    <div class="thumbnails hide-for-mobile flex flex__jc_sb">
+                        <img class="thumbnail active" src="images/image-product-1-thumbnail.jpg" alt="Product Thumbnail" onclick="showPanel(0)">
+                        <img class="thumbnail" src="images/image-product-2-thumbnail.jpg" alt="Product Thumbnail" onclick="showPanel(1)">
+                        <img class="thumbnail" src="images/image-product-3-thumbnail.jpg" alt="Product Thumbnail" onclick="showPanel(2)">
+                        <img class="thumbnail" src="images/image-product-4-thumbnail.jpg" alt="Product Thumbnail" onclick="showPanel(3)">
+                    </div>
+                </div>
+                <!-- Lightbox -->
+                <div class="lightbox flex flex__ai_c flex__jc_c">
+                    <div class="slider_container">
+                        <div class="slide_img_controls">
+                            <img class="slider_imgs" src="" alt="">
+                            <div class="slider_btns_light">
+                                <img class="light_btns__previous" src="images/icon-previous.svg" >
+                                <img class="light_btns__next" src="images/icon-next.svg" >
+                            </div>
+                        </div>
+                        <div>
+                            <img class="light_thumb" src="images/image-product-1-thumbnail.jpg" alt="Product Thumbnail" onclick="showImg(0)">
+                            <img class="light_thumb" src="images/image-product-2-thumbnail.jpg" alt="Product Thumbnail" onclick="showImg(1)">
+                            <img class="light_thumb" src="images/image-product-3-thumbnail.jpg" alt="Product Thumbnail" onclick="showImg(2)">
+                            <img class="light_thumb" src="images/image-product-4-thumbnail.jpg" alt="Product Thumbnail" onclick="showImg(3)">
+                        </div>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+            </div>
+
+
+        </main>
         <script src="app/js/app.js"></script>
     </body>
 </html>
