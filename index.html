@@ -43,13 +43,35 @@
             </nav>
 
             <div class="user_menu flex flex__ai_c">
-                <img class="cart" src="images/icon-cart.svg" alt="Shopping Cart">
+                <div class="cart">
+                    <div class="cart_styles">
+                        <img class="cart_styles__icon" src="images/icon-cart.svg" alt="Shopping Cart">
+                        <span class="cart_styles__tag"></span>
+                    </div>
+                    <div class="cart__container">
+                        <h2>Cart</h2>
+                        <div class="cart_empty">
+                            <h3> Your cart is empty! </h3>
+                        </div>
+                        <!-- <div class="item flex flex__ai_c">
+                            <img class="item_img" src="images/image-product-1-thumbnail.jpg" alt="Item Image">
+                            <div class="item_description">
+                                <p>Autumn Limited Edition...</p>
+                                <div class="price_total flex flex__ai_c">
+                                    <p>$125.00 x 3</p>
+                                    <p class="total">$375</p>
+                                </div>
+                            </div>
+                            <img class="delete_btn" src="images/icon-delete.svg" alt="Delete Button">
+                        </div> -->
+                    </div>
+                </div>
                 <img class="profile" src="images/image-avatar.png" alt="Profile Picture">
             </div>    
         </header>
 
-        <main>
-            <div class="product_slider_container">
+        <main class="flex flex__ai_c flex__jc_c">
+            <section class="product_slider_container">
                 <div class="slider flex flex__jc_c flex__ai_c">
                     <img class="image" src="" alt="Product Image">
 
@@ -85,8 +107,27 @@
                     </div>
                     <div class="bg"></div>
                 </div>
-            </div>
+            </section>
+            <section class="product">
+                <h4>Sneaker Company</h4>
+                <h1>Fall Limited Edition Sneakers</h1>
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                
+                <div class="price_discount">
+                    <h3>$125.00</h3>
+                    <span>50%</span>
+                    <p>$250.00</p>
+                </div>
 
+                <div class="quantity_add_cart flex flex__ai_c flex__jc_c">
+                    <div class="quantity">
+                        <button class="add_quantity" type="button">+</button>
+                        <input type="text" name="quantity" id="quantity" value = 0>
+                        <button class="subtract_quantity" type="button">-</button>
+                    </div>
+                    <button class="add_to_cart" type="button">Add to Cart</button>
+                </div>
+            </section>
 
         </main>
         <script src="app/js/app.js"></script>

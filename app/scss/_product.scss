@@ -1,0 +1,116 @@
+.product_slider_container {
+    @include desktop {
+        width: 50vw;
+    }
+}
+.product {
+    padding: 25px;
+    margin-bottom: 80px;
+
+    @include desktop {
+        padding: 25px 150px 25px 130px;
+    }
+
+    @include ldesktop {
+        padding: 25px 250px 25px 130px;
+    }
+
+    
+    h4 {
+        text-transform: uppercase;
+        color: color(primary);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        color: color(darkGB);
+    }
+
+    .price_discount {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        span {
+            margin-left: 20px;
+            padding: 5px 10px;
+            background-color: color(secondary);
+            border-radius: 5px;
+            color: color(primary);
+            font-weight: 700;
+        }
+
+        p {
+            margin-left: auto;
+            font-weight: 700;
+            text-decoration: line-through;
+            color: color(greyB);
+        }
+    }
+
+    .quantity_add_cart {
+        flex-direction: column;
+
+        @include desktop {
+            align-items: flex-start;
+        }
+
+        .quantity {
+            background-color: color(accents);
+            width: 335px;
+            height: 60px;
+            padding: 0;
+            border-radius: 10px;
+            
+            button {
+                background-color: transparent;
+                border: none;
+                height: 60px;
+                width: 60px;
+                cursor: pointer;
+                color: color(primary);
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            input {
+                background-color: transparent;
+                border: none;
+                height: 60px;
+                text-align: center;
+                cursor: text;
+                font-weight: 700;
+            }
+            
+        }
+
+        .add_to_cart {
+            background-image: url('/images/icon-cart-white.svg');
+            background-repeat: no-repeat;
+            background-position: 35% 50%;
+            background-size: 6%;
+            margin-top: 20px;
+            padding: 20px 0 20px 35px;
+            width: 335px;
+            background-color: color(primary);
+            border: none;
+            border-radius: 10px;
+            color: color(secondary);
+            font-weight: 700;
+            box-shadow: 1px 11px 20px #ff7d1a8f;
+            cursor: pointer;
+            transition: ease-in-out .2s;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}

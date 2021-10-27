@@ -1,8 +1,20 @@
+.product_slider_container {
+    @include desktop {
+        width: 50vw;
+    }
+}
+
+
 .slider {
     position: relative;
 
     @include desktop {
         flex-direction: column;
+        padding: 0 0 0 150px;
+    }
+
+    @include ldesktop {
+        padding: 0 0 0 250px;;
     }
 
     .image {
@@ -84,7 +96,8 @@
         position: fixed;
         flex-direction: column;
         top: 50%;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 4;
 
 
@@ -150,7 +163,7 @@
         z-index: 1;
     
         @supports (backdrop-filter: none){
-            backdrop-filter: blur(2px);
+            backdrop-filter: blur(5px);
         }
     
         @supports not (backdrop-filter: none){
@@ -158,6 +171,3 @@
         }
     }
 }
-
-
-

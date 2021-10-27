@@ -8,6 +8,8 @@ body {
     font-size: 100%;
     font-family: 'Kumbh Sans', sans-serif;
     width: 100%;
+    color: color(darkB);
+    font-weight: 400;
 }
 
 .flex {
@@ -26,12 +28,14 @@ body {
     }
 }
 
+main {
+    flex-direction: column;
 
-
-
-
-
-
+    @include desktop {
+        flex-direction: row;
+        padding-top: 80px;
+    }
+}
 
 
 
